@@ -1,0 +1,41 @@
+.global {
+  padding: 96px 0;
+
+  &__title {
+    font-size: 24px;
+    @include rock-bold;
+    line-height: 1.2;
+    color: $title;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+  }
+
+
+  &__item {
+    padding-left: 32px;
+    position: relative;
+    font-size: 18px;
+    line-height: 1.8;
+
+    @include roboto-bold;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url('../img/icons/mark.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

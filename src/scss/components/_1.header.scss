@@ -80,6 +80,7 @@
     @include rmin($r-md) {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -235,7 +236,7 @@
   position: relative;
   display: flex;
   color: $title;
-  margin-bottom: 32px;
+  // margin-bottom: 32px;
 
   &::before {
     content: "";
