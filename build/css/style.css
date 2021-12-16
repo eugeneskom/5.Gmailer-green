@@ -222,16 +222,16 @@ body {
 }
 
 @font-face {
-  font-family: "OpenSans-Regular";
-  src: local("OpenSans-Regular"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-family: "OpenSans-Bold";
+  src: local("OpenSans-Bold"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "OpenSans-Bold";
-  src: local("OpenSans-Bold"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-family: "OpenSans-Regular";
+  src: local("OpenSans-Regular"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -586,6 +586,10 @@ a {
   position: relative;
   display: flex;
   color: #555A64;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  margin-right: 15px;
 }
 
 .breadcrumbs::before {
@@ -628,82 +632,53 @@ a {
   opacity: 0.5;
 }
 
-.marketplace {
+.manage {
   padding: 64px 0 96px;
 }
 
-.marketplace__title {
+.manage__title {
   margin-bottom: 24px;
 }
 
-.marketplace__subtitle {
-  margin-bottom: 11px;
+.manage__subtitle {
+  margin-bottom: 61px;
   text-align: center;
 }
 
-.marketplace__box {
+.manage__box {
   max-height: 660px;
   height: 100%;
   display: flex;
   justify-content: center;
 }
 
-.communicate {
+.advantages {
   padding: 96px 0;
 }
 
-.communicate__title {
+.advantages__title {
   margin-bottom: 32px;
 }
 
-.communicate__subtitle {
-  margin-bottom: 48px;
-  text-align: center;
-}
-
-.communicate__card:not(:last-child) {
-  margin-bottom: 48px;
-}
-
-.communicate__heading {
-  margin-bottom: 24px;
-  color: #81A332;
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-.global {
-  padding: 96px 0;
-}
-
-.global__title {
-  font-size: 24px;
-  font-family: rockb, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #555A64;
-  margin-bottom: 24px;
-}
-
-.global__subtitle {
+.advantages__subtitle {
   margin-bottom: 32px;
 }
 
-.global__item {
+.advantages__list {
+  padding-left: 20px;
+}
+
+.advantages__item {
   padding-left: 32px;
   position: relative;
   font-size: 18px;
-  line-height: 1.8;
-  font-family: Roboto-Bold, sans-serif;
-  font-weight: 700;
 }
 
-.global__item::before {
+.advantages__item::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10px;
   width: 16px;
   height: 16px;
   background-image: url("../img/icons/mark.svg");
@@ -711,8 +686,70 @@ a {
   background-position: center;
 }
 
-.global__item:not(:last-child) {
+.advantages__item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.advantages__item span {
+  font-family: Roboto-Bold, sans-serif;
+  font-weight: 700;
+}
+
+.services {
+  padding: 96px 0;
+}
+
+.services__row {
+  margin-bottom: 64px;
+}
+
+@media only screen and (min-width: 992px) {
+  .services__row {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "first image-box" "second image-box";
+    column-gap: 41px;
+    row-gap: 54px;
+  }
+}
+
+.services__box {
+  grid-area: image-box;
+  max-height: 438px;
+  height: 100%;
+}
+
+.services__img {
+  height: 100%;
+}
+
+.service-card {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .service-card:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.service-card--first {
+  grid-area: first;
+}
+
+.service-card--second {
+  grid-area: second;
+}
+
+.service-card--wide {
+  max-width: 100%;
+}
+
+.service-card__title {
+  color: #555A64;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 24px;
 }
 
 .footer {

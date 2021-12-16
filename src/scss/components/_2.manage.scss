@@ -1,13 +1,16 @@
-.marketplace{
+.manage {
   padding: 64px 0 96px;
-  &__title{
+
+  &__title {
     margin-bottom: 24px;
   }
-  &__subtitle{
-    margin-bottom: 11px;
+
+  &__subtitle {
+    margin-bottom: 61px;
     text-align: center;
   }
-  &__box{
+
+  &__box {
     max-height: 660px;
     height: 100%;
     display: flex;
